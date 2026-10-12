@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #a3a380;
+    --secondary-color: #d6ce93;
+    --background-color: #efebce;
+    --text-color: #30301a;
+}
+
+header {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    size: 300%;
+    text-align: Center;
+    margin-bottom: 0px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    margin: 5px;
+    margin-bottom: -15px;
+    padding: 10px;
+}
+
+nav {
+    display: flex;            
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--background-color);
+}
+
+hr {
+    border: 5px solid var(--primary-color);
+    margin: 0px 0;
+}
+
+section {
+    width: calc(100% - 30px);
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: white;
+}
+
+.project-container {
+    display: grid;              
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 2px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: medium;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 10;
+}
+
+.side-coms {
+    font-style: italic;
+}
+
+table, th, td {
+    border: 1px solid var(--text-color);
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+    border: 3px solid var(--text-color);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--secondary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (min-width: 600px) {
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .project-container {
+        grid-template-columns: repeat(, 1fr);
+    }
+
+    section {
+        padding: 25px;
+    }
+}
